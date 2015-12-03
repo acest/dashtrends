@@ -266,7 +266,7 @@ class Dashtrends extends Module
 			end($compare[$key]); // move the internal pointer to the end of the array
 			$compare_max = key($compare[$key]);
 			reset($compare[$key]);
-			$compare_size = $compare_max - $compare_min;
+			$compare_size = max(1, $compare_max - $compare_min);
 
 			$translated_array[$key] = array();
 			foreach ($date_array as $compare_date => $value)
